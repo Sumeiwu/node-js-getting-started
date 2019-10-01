@@ -1,4 +1,3 @@
-
 const cool = require('cool-ascii-faces')
 const express = require('express')
 const path = require('path')
@@ -29,7 +28,7 @@ express()
       res.send("Error " + err);
     }
   })
-.get('/mongodb', function (request, response) {
+   .get('/mongodb', function (request, response) {
                              
      mongodb.connect(process.env.MONGODB_URI, function(err, client) {
          if(err) throw err;
@@ -60,4 +59,3 @@ showTimes = () => {
   }
   return result;
 }
-
